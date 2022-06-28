@@ -1,13 +1,11 @@
 package chapter07;
 
-public class Dog extends Animal {
+public abstract class Dog extends Animal {
 
-	void eat() {
-		super.breath();
-		breath();
-		System.out.println("사료를 먹는다.");
+	public Dog() {
+		super("포유류");
 	}
-	void breath() {
-		System.out.println("강아지가 숨을 쉰다.");
-	}
+	public abstract void eat();
+	public abstract void run();
+	public abstract void walk();
 }
