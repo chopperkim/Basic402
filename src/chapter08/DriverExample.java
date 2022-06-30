@@ -13,5 +13,13 @@ public class DriverExample {
 		
 		driver.drive(new Bus());
 		driver.drive(new Taxi());
+		
+		
+		Vehicle vehicle2 = new Vehicle() {
+			@Override
+			public void run() {
+				
+			}
+		};
 	}
 }
