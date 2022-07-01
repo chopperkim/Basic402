@@ -2,6 +2,7 @@ package chapter06;
 
 public class TeacherExample {
 	public static void main(String[] args) {
+		new Teacher();
 		Teacher t1 = new Teacher();
 		t1.salary = 100;
 		t1.balance = 200;
