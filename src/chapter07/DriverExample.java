@@ -7,7 +7,7 @@ public class DriverExample {
 		Bus bus2 = (Bus) vehicle2;
 		
 		Vehicle vehicle = new Bus();
-		Bus bus = (Bus) vehicle;
+		Taxi bus = (Taxi) vehicle;
 		
 		driver.drive(vehicle);
 	}
