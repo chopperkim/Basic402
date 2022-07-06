@@ -1,6 +1,6 @@
 package chapter10;
 
-public class CompileExceptionExample {
+public class CompileExceptionExample extends Object {
 	public static void main(String[] args) {
 		// 리플렉션(reflection)
 		try {
