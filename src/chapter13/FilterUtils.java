@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FilterUtils {
-	public List<Apple> filter(List<Apple> list, ApplePredicate predicate) {
-		List<Apple> redApples = new ArrayList<>();
-		for (Apple apple : list) {
-			if (predicate.test(apple)) {
-				redApples.add(apple);
+	// Generic Method
+	public static <T> List<T> filter(List<T> list, Predicate<T> predicate) {
+		List<T> retList = new ArrayList<>();
+		for (T t : list) {
+			if (predicate.test(t)) {
+				retList.add(t);
 			}
 		}
-		return list;
+		return retList;
 	}
 }

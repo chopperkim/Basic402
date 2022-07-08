@@ -1,6 +1,5 @@
 package chapter13;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,12 +18,34 @@ public class InterfaceExample {
 			new Apple(10, Color.GREEN),
 			new Apple(11, Color.RED)
 		);
-		List<Apple> redApples = new ArrayList<>();
-		for (Apple apple : list) {
-			if (apple.getColor() == Color.GREEN) {
-				redApples.add(apple);
+		
+		List<Apple> redApples = FilterUtils.filter(list, apple -> apple.getColor() == Color.RED);
+//		redApples.forEach(System.out::println);
+		
+		
+		
+		List<Banana> bananaList = Arrays.asList(
+			new Banana(1, Color.YELLOW),
+			new Banana(2, Color.YELLOW),
+			new Banana(3, Color.GREEN),
+			new Banana(4, Color.YELLOW),
+			new Banana(5, Color.GREEN)
+		);
+		List<Banana> filteredList = FilterUtils.filter(bananaList, new Predicate<Banana>() {
+			@Override
+			public boolean test(Banana t) {
+				return t.getColor() == Color.YELLOW;
 			}
-		}
-		redApples.forEach(System.out::println);
+		});
+		// Method Reference
+		filteredList.forEach(System.out::println);
+		
 	}
 }
+
+
+
+
+
+
+
